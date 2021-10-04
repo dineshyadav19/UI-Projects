@@ -1,4 +1,4 @@
-![Original Page](https://www.vectorstock.com/royalty-free-vector/landing-page-for-software-development-vector-30571905)
+![Original Page](https://cdn1.vectorstock.com/i/1000x1000/19/05/landing-page-for-software-development-vector-30571905.jpg)
 
 
 
