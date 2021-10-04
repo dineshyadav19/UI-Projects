@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color: white;
+    --nav-brand-color: rgb(219, 57, 16);
+    --background-color: linear-gradient(90deg, hsla(220, 78%, 29%, 1) 35%, hsla(221, 56%, 60%, 1) 100%)
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--background-color);
+}
+
+
+
+.navigation {
+    width: 100%;
+    height: 60px;
+    position: sticky;
+}
+
+
+.list-non-bullet {
+    list-style: none;
+}
+
+.list-item-inline {
+    display: inline;
+    padding: 0rem 1rem;
+}
+
+.navigation .nav-brand {
+    color: var(--nav-brand-color);
+    margin-left: 15px;
+    position: relative;
+    top: 20px;
+}
+
+ion-icon {
+    font-size: 24px;
+  }
+
+.navigation .list-non-bullet {
+    text-align: right;
+}
+
+/* header */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    margin: 70px 0;
+    display: flex;
+}
+
+.hero > .left {
+    margin: 0 30px;
+    padding: 50px;
+}
+
+.hero > .left .title {
+    color: var(--text-color);
+    margin: 15px 0px;
+}
+
+.hero > .left .description .description-title {
+    padding: 10px 0px;
+}
+
+.hero > .left .description .hero-btn{
+    margin: 10px 0px;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 8px 14px;
+}
+
+
+.hero > .right .hero-img {
+    border-radius: 10px;
+    box-shadow: 6px 6px  rgba(199, 77, 77, 0.2);
+    margin: 0 60px;
+    width: 700px;
+    
+}
