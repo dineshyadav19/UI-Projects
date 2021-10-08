@@ -1,0 +1,22 @@
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(9,50px);
+    grid-template-rows: repeat(9, 50px);
+    justify-content: center;
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+.chessboard div {
+    border: 1px solid black;
+}
+.chessboard div:nth-child(odd) {
+    background-color: black;
+}
+.chessboard div:nth-child(9n+0) {
+    background-color: transparent;
+    border: none;
+}
+
+.title {
+    text-align: center;
+}
