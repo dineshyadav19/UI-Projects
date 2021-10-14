@@ -83,7 +83,7 @@ function restart() {
 }
 
 
-//restart with anothr player
+//restart with another player 
 function restartNow() {
   firstPlayerScore = 0;
   secondPlayerScore = 0;
