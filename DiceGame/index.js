@@ -77,13 +77,14 @@ function restart() {
   document.querySelector(`#player1`).querySelector('input').removeAttribute('disabled')
   document.querySelector('.player2').querySelector('input').setAttribute('disabled', true)
   document.querySelector('.winner').remove()
-  document.querySelector('.dice img').setAttribute('src', `../images/dice1.png`)
+  document.querySelectorAll('.dice img')[0].outerHTML = "<img src=\"../images/dice1.png\">"
+  document.querySelectorAll('.dice img')[1].outerHTML = "<img src=\"../images/dice1.png\">"
 
   document.querySelector('.restart-game').style.display = "none"
 }
 
 
-//restart with another player 
+//restart with anothr player
 function restartNow() {
   firstPlayerScore = 0;
   secondPlayerScore = 0;
@@ -96,7 +97,8 @@ function restartNow() {
   
   document.querySelector('.winner').remove()
 
-  document.querySelector('.dice img').setAttribute('src', `../images/dice1.png`)
+  document.querySelectorAll('.dice img')[0].outerHTML = "<img src=\"../images/dice1.png\">"
+  document.querySelectorAll('.dice img')[1].outerHTML = "<img src=\"../images/dice1.png\">"
 
   const formData = document.querySelectorAll('input')
   formData[0].value = ""
