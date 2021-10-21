@@ -10,7 +10,6 @@ const appConstants = {
 
 
 window.addEventListener('load', (event) => {
-
     //Get Current Position
     navigator.geolocation.getCurrentPosition(function(position) {
         let lat = position.coords.latitude;
