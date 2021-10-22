@@ -1,18 +1,112 @@
-/* table {
-    table-layout: auto;
-    width: 100%;
-    border-collapse: collapse;
-  }
+:root {
+  --border: 2px solid grey;
+}
+
+body {
+  padding: 50px;
+  background-color: whitesmoke;
+}
+
+table {
+  
+  table-layout: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th:nth-child(1) {
+    width: 20%;
+}
+
+thead th:nth-child(2) {
+  width: 10%;
+}
+
+thead th:nth-child(3) {
+  width: 5%;
+}
 
 thead th:nth-child(4) {
-    width: 55%;
+  width: 10%;
+}
+
+thead {
+  text-transform: capitalize; 
 }
   
 th, tr {
-  padding: 20px;
+  padding: 15px;
 }
 
 tr td {
+    color: rgb(71, 68, 68);
     text-align: center;
-    padding: 0 25px;
-} */
+    padding: 20px 10px;
+    font-weight: 600;
+}
+
+tr td:nth-last-child(4) {
+  width: 12%;
+}
+
+tr td:nth-last-child(3) {
+  width: 15%;
+}
+
+tr {
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+tr td img{ 
+  box-sizing: border-box;
+  width: 25%; 
+  border-radius: 50%; 
+  height: 25%; 
+  cursor: pointer;
+}
+
+tr td:nth-last-child(1) button{
+  background: #92c7eb; 
+  background-image: url("http://res.freestockphotos.biz/pictures/15/15107-illustration-of-a-red-close-button-pv.png"); 
+  
+}
+
+tr td:nth-last-child(2) button{
+  background-image: url("https://cdn.pixabay.com/photo/2017/06/06/00/33/edit-icon-2375785_960_720.png"); 
+}
+
+tr td:nth-last-child(1) button, td:nth-last-child(2) button {
+  background-size: cover; 
+  background-position: center; 
+  display: inline-block; 
+  border: none; 
+  padding: 15px; 
+  width: 5%; 
+  border-radius: 42%; 
+  height: 5%; 
+  transition: all 0.5s; 
+  cursor: pointer;
+}
+
+tr td:nth-last-child(1) ,tr td:nth-last-child(2) {
+  width: 2.5%;
+}
+
+
+/*Progress Bar*/
+
+
+tr td:nth-child(5) > div{
+  padding: 2px;
+  width: 90%;
+  border: 3px solid #300b1a7a;
+  height: 10px;
+}
+
+tr td:nth-child(5) > div > div{
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+  transition: 0.3s;
+}
