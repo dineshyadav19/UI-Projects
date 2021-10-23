@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <form action="" id="searchForm">
-        <input type="text" placeholder="Search for the Project" onkeypress="searchTable()" autofocus>
-    </form>
+    <div id="searchForm">
+        <input type="text"  placeholder="Search for the Project" onchange="searchTable(event)" autofocus>
+    </div>
 
     <div id="addNewButton">
         <button type="submit">Add New Project</button>

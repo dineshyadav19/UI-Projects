@@ -1,5 +1,3 @@
-//import { Data } from "./Data.js";
-
 const Data = [
   {
       projectName: "New Admin Design",
@@ -139,11 +137,20 @@ function addData(event) {
   generateTable(table, newData);
 }
 
-const searchInput = document.querySelector('#searchForm input')
 
-function searchTable() {
-    searchInput.addEventListener()
+const searchInput = document.querySelector('#searchForm')
+function searchTable(event) {
+  event.preventDefault()
+  const res = []
+  let val = event.target.value
+  for(let element of Data) {
+    if(element.projectName.toLowerCase() === val.toLowerCase()) {
+      res.push(element)
+    }
+  }
+  let oldTable = document.querySelector('table')
+  oldTable.innerHTML = ""
+  generateTableHead(table, data)
+  generateTable(table, res)
 }
-
-
 
