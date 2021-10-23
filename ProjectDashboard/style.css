@@ -1,14 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Zen+Kurenaido&display=swap');
+
 :root {
   --border: 2px solid grey;
 }
 
 body {
+  font-family: 'Noto Sans', sans-serif;
   padding: 50px;
   background-color: whitesmoke;
 }
 
+/*Search Form*/
+
+
+#searchForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchForm > input {
+  padding: 10px 30px;
+  margin-bottom: 50px;
+  border-radius: 2px;
+}
+
+
 table {
-  
   table-layout: auto;
   width: 100%;
   border-collapse: collapse;
@@ -110,3 +130,40 @@ tr td:nth-child(5) > div > div{
   background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
   transition: 0.3s;
 }
+
+/*Add to table form*/
+
+#addData {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#addData input, #addNewButton button, #addData button{
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 2px;
+}
+
+#addNewButton {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#addNewButton button , #addData button{
+  margin-top: 6px;
+  border-radius: 25px;
+  background: linear-gradient(to right, #f12711, #f5af19);
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+

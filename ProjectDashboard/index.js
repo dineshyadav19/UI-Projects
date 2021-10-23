@@ -3,121 +3,65 @@
 const Data = [
   {
       projectName: "New Admin Design",
-      startDate: "02/5/2019",
+      startDate: "2019-05-02",
       status: "Completed",
-      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-1.jpg"
-    //   [
-    //       {
-    //           //name: "Design",
-    //           avatarUrl: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-1.jpg"
-    //       }
-    //   ]
-    ,
+      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-1.jpg",
       progress: 100
   },
   {
       projectName: "Landing Page Design",
-      startDate: "04/6/2019",
+      startDate: "2019-06-04",
       status: "Pending",
-      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-2.jpg"
-    //   [
-    //       {
-    //           //name: "Design",
-    //           avatarUrl: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-2.jpg"
-    //       }
-    //   ],
-      ,progress: 78
+      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-2.jpg",
+      progress: 78
   },
   {
       projectName: "Multipurpose Landing Template",
-      startDate: "06/6/2019",
+      startDate: "2019-06-06",
       status: "Completed",
-      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg"
-    //   [
-    //       {
-    //           //name: "Template",
-    //           avatarUrl: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg"
-    //       }
-    //   ]
-      ,
+      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg",
       progress: 100
   },{
       projectName: "Blog Template Design",
-      startDate: "07/5/2019",
+      startDate: "2019-05-07",
       status: "Completed",
-      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg"
-    //   [
-    //       {
-    //           //name: "Design",
-    //           avatarUrl: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg"
-    //       }
-    //   ],
-      ,progress: 100
+      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg",
+      progress: 100
   },
   {
       projectName: "Brand Logo Design",
-      startDate: "08/6/2019",
+      startDate: "2019-06-08",
       status: "Pending",
-      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-5.jpg"
-    //   [
-    //       {
-    //           //name: "Design",
-    //           avatarUrl: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-5.jpg"
-    //       }
-    //   ],
-      ,progress: 54
+      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-5.jpg",
+      progress: 54
   },
   {
       projectName: "Redesign - Landing Page",
-      startDate: "10/6/2019",
+      startDate: "2019-06-10",
       status: "Pending",
-      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-2.jpg"
-    //   [
-    //       {
-    //           //name: "Redesign",
-    //           avatarUrl: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-6.jpg"
-    //       }
-    //   ],
-      ,progress: 41
+      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-2.jpg",
+      progress: 41
   },
   {
       projectName: "Redesign - Dashboard",
-      startDate: "12/5/2019",
+      startDate: "2019-05-12",
       status: "Completed",
-      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg"
-    //   [
-    //       {
-    //           //name: "Redesign",
-    //           avatarUrl: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-7.jpg"
-    //       }
-    //   ],
-      ,progress: 100
+      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg",
+      progress: 100
   },
   {
       projectName: "Landing Page Design",
-      startDate: "13/6/2019",
+      startDate: "2019-06-13",
       status: "Pending",
-      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg"
-    //   [
-    //       {
-    //           //name: "Design",
-    //           avatarUrl: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-8.jpg"
-    //       }
-    //   ],
-      ,progress: 84
+      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg",
+      progress: 84
   },
   {
       projectName: "Multipurpose Landing Template",
-      startDate: "15/6/2019",
+      startDate: "2019-06-15",
       status: "Completed",
-      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-5.jpg"
-    //   [
-    //       {
-    //           //name: "Template",
-    //           avatarUrl: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-9.jpg"
-    //       }
-    //   ],
-      ,progress: 100
+      members: "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-5.jpg",
+      progress: 100
   }
 ]
 
@@ -181,19 +125,25 @@ generateTable(table, Data);
   
 
 function addData(event) {
+  const newData = []
   const obj = {};
   event.preventDefault()
-  const getData = document.querySelectorAll('input')
+  const getData = document.querySelectorAll('#addData input')
+  console.log(getData[1].value)
   obj.projectName = getData[0].value
   obj.startDate = getData[1].value
   obj.status = getData[2].value < 100 ? 'Pending' : 'Completed'
   obj.members = "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg"
   obj.progress = parseInt(getData[2].value)
-  Data.push(obj)
-  data = Object.keys(Data[0]);
-  generateTable(table, Data);
+  newData.push(obj)
+  generateTable(table, newData);
 }
 
+const searchInput = document.querySelector('#searchForm input')
+
+function searchTable() {
+    searchInput.addEventListener()
+}
 
 
 
