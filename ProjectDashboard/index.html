@@ -14,10 +14,8 @@
     </div>
 
     <div id="addNewButton">
-        <button type="submit">Add New Project</button>
+        <button type="submit" onclick="showForm()">Add New Project</button>
     </div>
-
-    <table></table>
 
     <form onsubmit="addData(event)" id="addData">
         <input type="text" placeholder="Enter project name" class="project-name" autofocus required>
@@ -25,6 +23,9 @@
         <input type="range" min="10" max="100" minlength="10" name="range" class="progress" required>
         <button type="submit">Submit</button>
     </form>
+
+    <table></table>
+
 
     <script src="index.js"></script>
 

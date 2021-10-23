@@ -105,11 +105,13 @@ function generateTable(table, data) {
     let newCell = row.insertCell(-1);
     let edit = document.createElement('button')
     edit.addEventListener('click', () => {
-      console.log('Hello')
+      alert("not yet working")
     })
     let remove = document.createElement('button')
-    remove.addEventListener('click', () => {
-      table.deleteRow(1)
+    remove.addEventListener('click', (event) => {
+      let td = event.target.parentNode; 
+      let tr = td.parentNode; 
+      tr.parentNode.removeChild(tr)
     })
     cell.appendChild(edit);
     newCell.appendChild(remove)
@@ -133,8 +135,9 @@ function addData(event) {
   obj.status = getData[2].value < 100 ? 'Pending' : 'Completed'
   obj.members = "https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg"
   obj.progress = parseInt(getData[2].value)
-  newData.push(obj)
+  newData.unshift(obj)
   generateTable(table, newData);
+  document.querySelector('#addData').style.display = 'none'
 }
 
 
@@ -154,3 +157,6 @@ function searchTable(event) {
   generateTable(table, res)
 }
 
+function showForm() {
+  document.querySelector('#addData').style.display = 'flex'
+}
