@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import ToggleData from "./ToggleData"
 import {WeatherIcons} from "../App"
 import { useState } from "react";
 
