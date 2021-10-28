@@ -32,6 +32,17 @@ const WeatherInfoLabel = styled.span`
   width: 90%;
   font-weight: bold;
   font-size: 14px;
+
+  & button {
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    padding: 10px 14px;
+    border: 2px solid black;
+    background-color: #005A9C;
+    border-radius: 4px;
+  }
 `;
 const WeatherIcon = styled.img`
   width: 100px;
@@ -110,6 +121,7 @@ const ShowCurrentData = (props) => {
             </WeatherContainer>
             <Location>{`${weather?.name}, ${weather?.sys?.country}`}</Location>
             <WeatherInfoLabel><button onClick={toggle}>See More Weather Info...</button></WeatherInfoLabel>
+            { state ? 
             <WeatherInfoContainer>
                 <WeatherInfoComponent name={isDay ? "sunset" : "sunrise"}
                                       value={`${getTime(weather?.sys[isDay ? "sunset" : "sunrise"])}`}/>
@@ -117,6 +129,8 @@ const ShowCurrentData = (props) => {
                 <WeatherInfoComponent name={"wind"} value={weather?.wind?.speed}/>
                 <WeatherInfoComponent name={"pressure"} value={weather?.main?.pressure}/>
             </WeatherInfoContainer>
+            : null  
+          }
         </>
     );
 };
